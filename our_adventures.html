@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos futures aventures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+<body>
+    <div style="text-align: center; width: 100%;">
+        <h1 class="header_text">Le monde nous attend...</h1>
+        <div class="grid-container">
+            <!-- Japon -->
+            <a href="japan.html" class="destination-card">
+                <img src="images/japan.jpg" alt="Japon">
+                <h2>Japon</h2>
+            </a>
+            <!-- Thaïlande -->
+            <a href="thailand.html" class="destination-card">
+                <img src="images/thailand.jpg" alt="Thaïlande">
+                <h2>Thaïlande</h2>
+            </a>
+            <!-- Égypte -->
+            <a href="egypt.html" class="destination-card">
+                <img src="images/egypt.jpg" alt="Égypte">
+                <h2>Égypte</h2>
+            </a>
+            <!-- Suède -->
+            <a href="sweden.html" class="destination-card">
+                <img src="images/sweden.jpg" alt="Suède">
+                <h2>Suède</h2>
+            </a>
+            <!-- Angleterre -->
+            <a href="england.html" class="destination-card">
+                <img src="images/england.jpg" alt="Angleterre">
+                <h2>Angleterre</h2>
+            </a>
+            <!-- Italie -->
+            <a href="italy.html" class="destination-card">
+                <img src="images/italy.jpg" alt="Italie">
+                <h2>Italie</h2>
+            </a>
+        </div>
+
+        <!-- ***** LIGNE AJOUTÉE ICI ***** -->
+        <a href="choice_hub.html" class="back-link">Retour aux choix principaux</a>
+        
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+        });
+
+        function createFallingEmoji() {
+            // La liste des emojis d'amour ! 💖
+            const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
+            
+            const emoji = document.createElement('div');
+            emoji.classList.add('heart'); // On réutilise la même classe CSS
+
+            // On choisit un emoji au hasard dans notre liste
+            emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            emoji.style.left = Math.random() * 100 + 'vw';
+            
+            // On fait varier la vitesse et la taille
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000); // On le supprime un peu plus tard
+        }
+    </script>
+</body>
+</html>

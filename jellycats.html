@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futurs Jellycats !</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+<body>
+    <div style="text-align: center; width: 100%;">
+        <h1 class="header_text">La future collection de Jellycats</h1>
+        <div class="grid-container">
+            <!-- Jellycat 1: Remplace par un vrai ! -->
+            <a href="jelly_bunny.html" class="destination-card">
+                <img src="images/jelly_bunny.jpg" alt="Jellycat Bashful Bunny">
+                <h2>Bashful Beige Bunny</h2>
+            </a>
+            <!-- Jellycat 2: Remplace par un vrai ! -->
+            <a href="jelly_avocado.html" class="destination-card">
+                <img src="images/jelly_avocado.jpg" alt="Jellycat Amuseable Avocado">
+                <h2>Amuseable Avocado</h2>
+            </a>
+            <!-- Jellycat 3: Ajoutes-en d'autres ici ! -->
+            <a href="#" class="destination-card">
+                <img src="https://placehold.co/400x300/fce4ec/e91e63?text=Bientôt..." alt="Prochain Jellycat">
+                <h2>Un petit nouveau ?</h2>
+            </a>
+        </div>
+        <a href="choice_hub.html" class="back-link">Retour aux choix</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+        });
+
+        function createFallingEmoji() {
+            // La liste des emojis d'amour ! 💖
+            const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
+            
+            const emoji = document.createElement('div');
+            emoji.classList.add('heart'); // On réutilise la même classe CSS
+
+            // On choisit un emoji au hasard dans notre liste
+            emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            emoji.style.left = Math.random() * 100 + 'vw';
+            
+            // On fait varier la vitesse et la taille
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000); // On le supprime un peu plus tard
+        }
+    </script>
+</body>
+</html>

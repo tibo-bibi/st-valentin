@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos futures découvertes gourmandes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+<body>
+    <div style="text-align: center; width: 100%;">
+        <h1 class="header_text">Notre Food Wishlist</h1>
+        <div class="grid-container">
+
+            <!-- Raising Cane's -->
+            <a href="https://www.raisingcanes.com/" target="_blank" class="destination-card">
+                <img src="images/raising-canes.jpg" alt="Raising Cane's">
+                <h2>Raising Cane's</h2>
+            </a>
+
+            <!-- Joe & The Juice -->
+            <a href="https://www.joejuice.com/" target="_blank" class="destination-card">
+                <img src="images/joe-and-the-juice.jpg" alt="Joe & The Juice">
+                <h2>Joe & The Juice</h2>
+            </a>
+
+            <!-- Taco Bell -->
+            <a href="https://www.tacobell.fr/" target="_blank" class="destination-card">
+                <img src="images/taco-bell.jpg" alt="Taco Bell">
+                <h2>Taco Bell</h2>
+            </a>
+
+            <!-- Autres -->
+            <a href="#" class="destination-card" style="cursor: default;">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1974" alt="Autres restaurants">
+                <h2>Et bien d'autres... 😋</h2>
+            </a>
+            
+        </div>
+        <a href="choice_hub.html" class="back-link">Retour aux choix principaux</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+        });
+
+        function createFallingEmoji() {
+            // La liste des emojis d'amour ! 💖
+            const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
+            
+            const emoji = document.createElement('div');
+            emoji.classList.add('heart'); // On réutilise la même classe CSS
+
+            // On choisit un emoji au hasard dans notre liste
+            emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            emoji.style.left = Math.random() * 100 + 'vw';
+            
+            // On fait varier la vitesse et la taille
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000); // On le supprime un peu plus tard
+        }
+    </script>
+</body>
+</html>

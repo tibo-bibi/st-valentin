@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"><title>Notre voyage en Suède</title><link rel="stylesheet" href="style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+<body class="country-page">
+    <div class="container">
+        <h1 class="header_text">Notre Escapade en Suède</h1>
+        <img src="images/sweden.jpg" alt="Suède" class="header-image">
+        <p>Entre le charme de la vieille ville de Stockholm, la magie des aurores boréales et la douceur de vivre du "fika".</p>
+        
+        <h3>Ce qui nous attend :</h3>
+        <ul>
+            <li>Se balader main dans la main dans les ruelles de Gamla Stan.</li>
+            <li>Partir à la chasse aux aurores boréales en Laponie suédoise.</li>
+            <li>Faire une pause "fika" (café et pâtisserie) tous les jours.</li>
+            <li>Explorer l'archipel de Stockholm en bateau.</li>
+            <li>Visiter le musée Vasa et son navire du 17ème siècle.</li>
+        </ul>
+
+        <div class="shopping-section">
+            <h3>Mission Shopping pour toi ❤️</h3>
+            <p>On explorera les boutiques de design du quartier de Södermalm à Stockholm, et bien sûr, on fera un arrêt obligatoire à la boutique <strong>Brandy Melville</strong> !</p>
+        </div>
+
+        <a href="our_adventures.html" class="back-link">Retour à nos projets</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+        });
+
+        function createFallingEmoji() {
+            // La liste des emojis d'amour ! 💖
+            const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
+            
+            const emoji = document.createElement('div');
+            emoji.classList.add('heart'); // On réutilise la même classe CSS
+
+            // On choisit un emoji au hasard dans notre liste
+            emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            emoji.style.left = Math.random() * 100 + 'vw';
+            
+            // On fait varier la vitesse et la taille
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000); // On le supprime un peu plus tard
+        }
+    </script>
+</body>
+</html>

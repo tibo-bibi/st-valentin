@@ -1,0 +1,266 @@
+/* Importation d'une police mignonne depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* --- ✨ CURSEUR MIGNON (VERSION FIABLE) ✨ --- */
+html {
+    /* On pointe vers notre fichier image */
+    cursor: url('heart-cursor.png'), auto;
+}
+
+/* On garde le curseur 'main' pour les choses cliquables */
+a, button {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    /* NOUVEAU FOND DÉGRADÉ */
+    background: linear-gradient(-45deg, #f8bbd0, #fce4ec, #e1bee7, #f8bbd0);
+    background-size: 400% 400%;
+    animation: gradient-bg 15s ease infinite;
+}
+
+.no-scroll {
+    overflow: hidden;
+    justify-content: center; /* On remet le centrage vertical pour cette page */
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header_text {
+    font-family: 'Pacifico', cursive; /* La police mignonne */
+    font-size: 3em;
+    color: #e91e63; /* Rose foncé */
+    margin-bottom: 20px;
+}
+
+.gif_container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#yesButton {
+    background-color: #4CAF50; /* Vert */
+}
+
+#yesButton:hover {
+    transform: scale(1.1);
+    background-color: #66bb6a;
+}
+
+#noButton {
+    background-color: #f44336; /* Rouge */
+}
+
+/* Le message sur la page "oui" */
+.love_message {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* --- STYLES POUR LES PAGES DE VOYAGE --- */
+
+/* Style pour la grille des destinations */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90vw;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- STYLE POUR LES TITRES DE CATÉGORIE SUR LE HUB --- */
+.category-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fce4ec;
+    padding-bottom: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h2 {
+    font-family: 'Pacifico', cursive;
+    margin: 15px;
+    color: #e91e63;
+}
+
+/* Style pour les pages de chaque pays */
+.country-page .container {
+    max-width: 800px;
+    text-align: left;
+}
+
+.country-page .header-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.country-page ul {
+    list-style-type: '✈️ '; /* Petite icône d'avion */
+    padding-left: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.shopping-section {
+    background-color: #fdf2f6;
+    border-left: 5px solid #e91e63;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.shopping-section h3 {
+    margin-top: 0;
+    color: #e91e63;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #e91e63;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.back-link:hover {
+    background-color: #c2185b;
+}
+
+/* --- STYLE POUR LES COEURS QUI TOMBENT --- */
+.heart {
+    position: fixed;
+    top: -10vh; /* Commence au-dessus de l'écran */
+    font-size: 2rem;
+    pointer-events: none; /* Pour ne pas gêner les clics */
+    animation: fall 5s linear forwards;
+    z-index: 100; /* Pour être au-dessus du reste */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh); /* Tombe jusqu'en bas de l'écran */
+    }
+}
+
+/* --- ✨ ANIMATION DES ÉTINCELLES ✨ --- */
+.sparkle {
+    position: fixed;
+    font-size: 1.5rem;
+    pointer-events: none;
+    z-index: 101; /* Au-dessus des coeurs qui tombent */
+    animation: sparkle-anim 0.5s forwards;
+}
+
+@keyframes sparkle-anim {
+    to {
+        transform: translateY(-50px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* ANIMATION POUR LE FOND DÉGRADÉ */
+@keyframes gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ANIMATION DE PULSATION */
+.pulse {
+    animation: pulse-anim 2s infinite;
+}
+
+@keyframes pulse-anim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* STYLE POUR LE MESSAGE SECRET */
+.secret-message {
+    margin-top: 30px;
+    color: #aaa;
+    font-style: italic;
+}
+.secret-message .hidden-text {
+    opacity: 0; /* Le texte est invisible par défaut */
+    transition: opacity 0.5s ease-in-out;
+}
+.secret-message:hover .hidden-text {
+    opacity: 1; /* Le texte devient visible au survol du paragraphe */
+    color: #e91e63;
+}

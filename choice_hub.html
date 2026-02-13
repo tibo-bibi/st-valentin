@@ -3,47 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Une question pour toi...</title>
+    <title>Que fait-on maintenant ?</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
 </head>
-<body class="no-scroll">
-    <div class="container" id="container">
-        <h1 class="header_text">Veux-tu être ma Valentine ?</h1>
-        <div class="gif_container">
-            <!-- Tu peux changer ce GIF ! Cherche "cute bear love gif" sur Google -->
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTBsc2txeDR5eGNmZDB1dWs4dXQ1a3Uza3d0c2lsaDJ6eHoyc3F1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+<body>
+    <div style="text-align: center; width: 100%;">
+        <h1 class="header_text">Notre futur commence ici... 🥰</h1>
+        
+        <!-- CATÉGORIE 1 -->
+        <h2 class="category-title">Nos prochaines aventures ✈️</h2>
+        <div class="grid-container">
+            <a href="our_adventures.html" class="destination-card">
+                <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2070" alt="Voyages">
+                <h2>Explorer le Monde 🌍</h2>
+            </a>
+            <a href="restaurants.html" class="destination-card">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974" alt="Restaurants">
+                <h2>Découvertes Gourmandes 🌮</h2>
+            </a>
         </div>
-        <div class="buttons">
-            <button class="btn pulse" id="yesButton" onclick="nextPage()">Oui !</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Non</button>
+
+        <!-- CATÉGORIE 2 -->
+        <h2 class="category-title">Quelques cadeaux pour toi 🎁</h2>
+        <div class="grid-container">
+            <a href="jellycats.html" class="destination-card">
+                <img src="https://images.unsplash.com/photo-1618840228182-789a444a4d65?q=80&w=1974" alt="Jellycats">
+                <h2>Collection d'Amis Doux 🧸</h2>
+            </a>
+            <a href="shopping.html" class="destination-card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070" alt="Shopping">
+                <h2>Prochains Achats 🛍️</h2>
+            </a>
         </div>
     </div>
-
-    <script>
-        function nextPage() {
-            window.location.href = "yes.html";
-        }
-
-        function moveButton() {
-            var noButton = document.getElementById('noButton');
-            
-            // On calcule une position aléatoire dans la fenêtre
-            var x = Math.random() * (window.innerWidth - noButton.offsetWidth);
-            var y = Math.random() * (window.innerHeight - noButton.offsetHeight);
-
-            // On s'assure que le bouton ne sort pas de l'écran
-            x = Math.max(0, x);
-            y = Math.max(0, y);
-
-            noButton.style.position = 'absolute'; // Important pour pouvoir le déplacer
-            noButton.style.left = x + 'px';
-            noButton.style.top = y + 'px';
-        }
-    </script>
-    <!-- ... (le reste de votre page) ... -->
-
-    <!-- AJOUTER CE SCRIPT POUR LES COEURS -->
+    
+<!-- AJOUTER CE SCRIPT POUR LES COEURS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
@@ -72,6 +67,8 @@
             }, 7000); // On le supprime un peu plus tard
         }
     </script>
+
+    <!-- N'oublie pas d'ajouter le script ici -->
     <script src="effects.js" defer></script>
 </body>
 </html>

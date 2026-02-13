@@ -3,47 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Une question pour toi...</title>
+    <title>Hourra !</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
 </head>
-<body class="no-scroll">
-    <div class="container" id="container">
-        <h1 class="header_text">Veux-tu être ma Valentine ?</h1>
+<body>
+    <div class="container">
+        <h1 class="header_text">Hourraaaa ! Je t'aime ! ❤️</h1>
         <div class="gif_container">
-            <!-- Tu peux changer ce GIF ! Cherche "cute bear love gif" sur Google -->
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTBsc2txeDR5eGNmZDB1dWs4dXQ1a3Uza3d0c2lsaDJ6eHoyc3F1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Zsdm94Z2Vib3p4bThzZ3d4anV5YjN1d2Q2N212cHZueDVneHc4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/UMon0fuS304t2/giphy.gif" alt="Cute animated illustration">
         </div>
+        <p class="love_message">
+            Tu rends chaque jour plus beau. <br>
+            Joyeuse Saint-Valentin mon amour !
+        </p>
+        
+        <!-- AJOUTE CE MESSAGE SECRET ICI -->
+        <p class="secret-message">P.S. Passe ta souris ici <span class="hidden-text">... je t'aime plus que tout au monde.</span></p>
+
+        <!-- Dans yes.html, remplace l'ancienne div "buttons" par celle-ci -->
         <div class="buttons">
-            <button class="btn pulse" id="yesButton" onclick="nextPage()">Oui !</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Non</button>
+            <button class="btn" id="yesButton" onclick="window.location.href='choice_hub.html'">Et maintenant ?...</button>
         </div>
     </div>
-
-    <script>
-        function nextPage() {
-            window.location.href = "yes.html";
-        }
-
-        function moveButton() {
-            var noButton = document.getElementById('noButton');
-            
-            // On calcule une position aléatoire dans la fenêtre
-            var x = Math.random() * (window.innerWidth - noButton.offsetWidth);
-            var y = Math.random() * (window.innerHeight - noButton.offsetHeight);
-
-            // On s'assure que le bouton ne sort pas de l'écran
-            x = Math.max(0, x);
-            y = Math.max(0, y);
-
-            noButton.style.position = 'absolute'; // Important pour pouvoir le déplacer
-            noButton.style.left = x + 'px';
-            noButton.style.top = y + 'px';
-        }
-    </script>
     <!-- ... (le reste de votre page) ... -->
 
-    <!-- AJOUTER CE SCRIPT POUR LES COEURS -->
+    <!-- SCRIPT MIS À JOUR POUR LES EMOJIS QUI TOMBENT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
@@ -72,6 +57,5 @@
             }, 7000); // On le supprime un peu plus tard
         }
     </script>
-    <script src="effects.js" defer></script>
 </body>
 </html>

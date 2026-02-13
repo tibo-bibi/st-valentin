@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Bashful Bunny</title><link rel="stylesheet" href="style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>"></head>
+<body class="country-page">
+    <div class="container">
+        <h1 class="header_text">Bashful Beige Bunny</h1>
+        <img src="images/jelly_bunny.jpg" alt="Jellycat Bunny" class="header-image">
+        <p>Le classique, l'indémodable ! Avec ses longues oreilles toutes douces, il est parfait pour les câlins.</p>
+        <div class="shopping-section">
+            <h3>Infos</h3>
+            <p><strong>Prix approximatif :</strong> 25€ (taille Medium)</p>
+        </div>
+        <a href="jellycats.html" class="back-link">Retour à la collection</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+        });
+
+        function createFallingEmoji() {
+            // La liste des emojis d'amour ! 💖
+            const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
+            
+            const emoji = document.createElement('div');
+            emoji.classList.add('heart'); // On réutilise la même classe CSS
+
+            // On choisit un emoji au hasard dans notre liste
+            emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            emoji.style.left = Math.random() * 100 + 'vw';
+            
+            // On fait varier la vitesse et la taille
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000); // On le supprime un peu plus tard
+        }
+    </script>
+</body>
+</html>
