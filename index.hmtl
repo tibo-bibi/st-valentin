@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Pour toi ❤️</title>
+<style>
+body {
+    background: #ffe6f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 50px;
+    color: #ff4d88;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 15px;
+    border: none;
+    border-radius: 20px;
+    background: #ff66a3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff3385;
+}
+
+.hidden {
+    display: none;
+}
+
+.heart {
+    position: fixed;
+    top: -10px;
+    color: red;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Pour la plus belle ❤️</h1>
+
+<button onclick="showMessage(1)">Pourquoi je t’aime ?</button>
+<button onclick="showMessage(2)">Quand tu me manques...</button>
+<button onclick="showMessage(3)">Notre futur</button>
+
+<p id="message" class="hidden"></p>
+
+<h2 id="counter"></h2>
+
+<script>
+
+function showMessage(type) {
+    const message = document.getElementById("message");
+    message.classList.remove("hidden");
+
+    if(type === 1) {
+        message.innerHTML = "Je t’aime pour ton sourire, ta voix, ta douceur et la manière dont tu rends mes journées meilleures.";
+    }
+    if(type === 2) {
+        message.innerHTML = "Même à distance, je te choisis chaque jour. Les kilomètres ne changeront jamais ce que je ressens.";
+    }
+    if(type === 3) {
+        message.innerHTML = "Je veux voyager avec toi, rire avec toi, construire quelque chose de beau avec toi.";
+    }
+}
+
+function updateCounter() {
+    const startDate = new Date("2023-08-12");
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("counter").innerHTML = "Ça fait " + days + " jours que je suis fou de toi ❤️";
+}
+
+updateCounter();
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 300);
+
+</script>
+
+</body>
+</html>
