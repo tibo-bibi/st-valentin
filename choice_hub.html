@@ -9,66 +9,59 @@
 </head>
 <body>
     <div style="text-align: center; width: 100%;">
-        <h1 class="header_text">Notre futur commence ici... 🥰</h1>
+        <h1 class="header_text">🥰 Notre futur proche je l'espère 🥰</h1>
         
-        <!-- CATÉGORIE 1 -->
-        <h2 class="category-title">Nos prochaines aventures ✈️</h2>
+        <h2 class="category-title">Nos prochaines aventures ✈️🌍</h2>
         <div class="grid-container">
             <a href="our_adventures.html" class="destination-card">
-                <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2070" alt="Voyages">
-                <h2>Explorer le Monde 🌍</h2>
+                <img src="https://www.teeltee.com/wp-content/uploads/2023/08/digital-art-g352076efd_1280-853x640.png" alt="Voyages">
+                <h2>Explorer le monde en amoureux</h2>
             </a>
             <a href="restaurants.html" class="destination-card">
-                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974" alt="Restaurants">
-                <h2>Découvertes Gourmandes 🌮</h2>
+                <img src="https://www.spadreams.fr/blog/wp-content/uploads/sites/8/2020/09/RS14887_AdobeStock_260128861-scr.jpg" alt="Restaurants">
+                <h2>Relation calorique pas toxique</h2>
             </a>
         </div>
 
-        <!-- CATÉGORIE 2 -->
-        <h2 class="category-title">Quelques cadeaux pour toi 🎁</h2>
+        <h2 class="category-title">Tes prochains cadeaux 🎁🎀</h2>
         <div class="grid-container">
             <a href="jellycats.html" class="destination-card">
-                <img src="https://images.unsplash.com/photo-1618840228182-789a444a4d65?q=80&w=1974" alt="Jellycats">
-                <h2>Collection d'Amis Doux 🧸</h2>
+                <img src="images/i.jpg" alt="Jellycats">
+                <h2>Tes petits amis les jellycats</h2>
             </a>
             <a href="shopping.html" class="destination-card">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070" alt="Shopping">
-                <h2>Prochains Achats 🛍️</h2>
+                <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D" alt="Shopping">
+                <h2>☢️ Dévalisation imminente des magasins ☢️</h2>
             </a>
         </div>
     </div>
     
-<!-- AJOUTER CE SCRIPT POUR LES COEURS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             
             emoji.style.left = Math.random() * 100 + 'vw';
             
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's';
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem';
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
 
-    <!-- N'oublie pas d'ajouter le script ici -->
     <script src="effects.js" defer></script>
 </body>
 </html>

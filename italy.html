@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8"><title>Notre voyage en Angleterre</title><link rel="stylesheet" href="style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <meta charset="UTF-8">
+    <title>Notre voyage en Italie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
 </head>
+
 <body class="country-page">
     <div class="container">
-        <h1 class="header_text">Notre Aventure en Angleterre</h1>
-        <img src="images/england.jpg" alt="Angleterre" class="header-image">
-        <p>À nous l'effervescence de Londres, le charme des villages des Cotswolds et l'incontournable "afternoon tea".</p>
+        <h1 class="header_text">Nous en Italie</h1>
+        <img src="images/italy.jpg" alt="Italie" class="header-image">
+        <p>Dolce vita, pasta, gelato et couchers de soleil incroyables… l’Italie nous attend tellement bb, j'ai hâte d'y aller en été et de faire le tour du pays avec toi, je t'aimeeeee ! </p>
         
         <h3>Ce qui nous attend :</h3>
         <ul>
-            <li>Prendre une photo devant Tower Bridge et Buckingham Palace.</li>
-            <li>Faire un "afternoon tea" très chic avec des scones et des petits sandwichs.</li>
-            <li>Visiter les studios Harry Potter (si ça te dit !).</li>
-            <li>Se promener dans les rues colorées de Notting Hill.</li>
-            <li>Explorer la campagne anglaise et ses cottages adorables.</li>
+            <li>Se balader main dans la main à Rome devant le Colisée.</li>
+            <li>Lancer une pièce dans la fontaine de Trevi.</li>
+            <li>Manger une pizza napolitaine en coeur et plein de pâtes (évidemment).</li>
+            <li>Admirer les canaux de Venise en gondole.</li>
+            <li>Profiter d’un coucher de soleil en Sicile.</li>
         </ul>
 
         <div class="shopping-section">
             <h3>Mission Shopping pour toi ❤️</h3>
-            <p>Londres, c'est LE paradis ! On arpentera Oxford Street et Carnaby Street, avec des arrêts obligatoires chez <strong>Cotton On</strong> ET <strong>Brandy Melville</strong>. Le jackpot !</p>
+            <p>Milan nous voilà ! Capitale de la mode, on fera les boutiques chez <strong>Zara</strong> et <strong>Brandy Melville</strong>. Il y aura peut-être quelques petites surprises italiennes (bracelets, colliers etc j'ai trop hâte).</p>
         </div>
 
         <a href="our_adventures.html" class="back-link">Retour à nos projets</a>
     </div>
-        <!-- AJOUTER CE SCRIPT POUR LES COEURS -->
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
-            
             emoji.style.left = Math.random() * 100 + 'vw';
-            
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's';
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem';
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
+
+    <script src="effects.js" defer></script>
 </body>
 </html>

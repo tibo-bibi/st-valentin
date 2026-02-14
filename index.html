@@ -9,10 +9,10 @@
 </head>
 <body class="no-scroll">
     <div class="container" id="container">
-        <h1 class="header_text">Veux-tu être ma Valentine ?</h1>
+        <h1 class="header_text">❤️ Coucou Bianca ❤️</h1>
+        <h2 class="header_text">Would you be my valentine ?</h2>
         <div class="gif_container">
-            <!-- Tu peux changer ce GIF ! Cherche "cute bear love gif" sur Google -->
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTBsc2txeDR5eGNmZDB1dWs4dXQ1a3Uza3d0c2lsaDJ6eHoyc3F1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            <img src="https://media.tenor.com/uRzMIon_NBgAAAAi/bubuiak14kiss1.gif" alt="Cute animated illustration">
         </div>
         <div class="buttons">
             <button class="btn pulse" id="yesButton" onclick="nextPage()">Oui !</button>
@@ -28,48 +28,40 @@
         function moveButton() {
             var noButton = document.getElementById('noButton');
             
-            // On calcule une position aléatoire dans la fenêtre
             var x = Math.random() * (window.innerWidth - noButton.offsetWidth);
             var y = Math.random() * (window.innerHeight - noButton.offsetHeight);
 
-            // On s'assure que le bouton ne sort pas de l'écran
             x = Math.max(0, x);
             y = Math.max(0, y);
 
-            noButton.style.position = 'absolute'; // Important pour pouvoir le déplacer
+            noButton.style.position = 'absolute'; 
             noButton.style.left = x + 'px';
             noButton.style.top = y + 'px';
         }
     </script>
-    <!-- ... (le reste de votre page) ... -->
-
-    <!-- AJOUTER CE SCRIPT POUR LES COEURS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             
             emoji.style.left = Math.random() * 100 + 'vw';
             
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; 
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; 
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
     <script src="effects.js" defer></script>

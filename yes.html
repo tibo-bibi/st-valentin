@@ -3,59 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hourra !</title>
+    <title>Lets gooo je t'aime !</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
 </head>
 <body>
     <div class="container">
-        <h1 class="header_text">Hourraaaa ! Je t'aime ! ❤️</h1>
+        <h1 class="header_text">❤️ Lets gooo je t'aime ! ❤️</h1>
         <div class="gif_container">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Zsdm94Z2Vib3p4bThzZ3d4anV5YjN1d2Q2N212cHZueDVneHc4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/UMon0fuS304t2/giphy.gif" alt="Cute animated illustration">
+            <img src="https://media.tenor.com/OlY1rZOa0JEAAAAj/monkey-dance-love.gif" alt="Cute animated illustration">
+        </div>
+        <div class="gif_container">
+            <img src="https://media.tenor.com/OmU5vtbO8YsAAAAj/happy-excited.gif" alt="Cute animated illustration">
         </div>
         <p class="love_message">
-            Tu rends chaque jour plus beau. <br>
-            Joyeuse Saint-Valentin mon amour !
+            Merci d'être dans ma vie, tu me rends heureux chaque jour. <br>
+            Joyeuse Saint-Valentin mon amour ! ❤️
         </p>
         
-        <!-- AJOUTE CE MESSAGE SECRET ICI -->
-        <p class="secret-message">P.S. Passe ta souris ici <span class="hidden-text">... je t'aime plus que tout au monde.</span></p>
+        <p class="secret-message">ps: met ta souris là <span class="hidden-text">... je t'aime + que TOUT au monde, je t'aimerai éternellement et je suis à toi pour toujours je te le promets.</span></p>
 
-        <!-- Dans yes.html, remplace l'ancienne div "buttons" par celle-ci -->
         <div class="buttons">
-            <button class="btn" id="yesButton" onclick="window.location.href='choice_hub.html'">Et maintenant ?...</button>
+            <button class="btn" id="yesButton" onclick="window.location.href='choice_hub.html'">Tiens tiens à quoi sert ce bouton ?</button>
         </div>
     </div>
-    <!-- ... (le reste de votre page) ... -->
-
-    <!-- SCRIPT MIS À JOUR POUR LES EMOJIS QUI TOMBENT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             
             emoji.style.left = Math.random() * 100 + 'vw';
             
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's';
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem';
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
+    <script src="effects.js" defer></script>
 </body>
 </html>

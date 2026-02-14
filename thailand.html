@@ -5,53 +5,52 @@
 </head>
 <body class="country-page">
     <div class="container">
-        <h1 class="header_text">Notre Évasion en Thaïlande</h1>
+        <h1 class="header_text">Nous en Thaïlande</h1>
         <img src="images/thailand.jpg" alt="Thaïlande" class="header-image">
-        <p>Des plages de sable blanc de Phuket aux temples dorés de Bangkok, ce sera un voyage pour se détendre et s'émerveiller.</p>
+        <p>Des plages de sable blanc de Phuket aux temples dorés de Bangkok, on fera un voyage pour se détendre avec du yoga, du bouddhisme et plein de découvertes en terme de plats, j'ai super hâte ma femme je t'aime.</p>
         
         <h3>Ce qui nous attend :</h3>
         <ul>
-            <li>Se baigner dans les eaux turquoise des îles Phi Phi.</li>
-            <li>Visiter un sanctuaire éthique pour éléphants.</li>
+            <li>Se baigner dans les eaux turquoise des îles Phi Phi (et espérer ne pas tomber sur les animaux dangereux).</li>
+            <li>Rencontrer des éléphants dans un lieu respectueux où ils vivent libres et bien traités (ils sont connus pour ça en Thailande).</li>
             <li>Explorer les marchés flottants colorés.</li>
-            <li>Se régaler de street food à Bangkok pour quelques centimes.</li>
-            <li>Admirer le temple du Bouddha d'Émeraude.</li>
+            <li>Se régaler de street food à Bangkok pour quelques centimes ET CA JAI TROP ENVIEEEE.</li>
+            <li>Admirer le temple du Bouddha d'Émeraude, parce que selon mon parrain c'est trop beau.</li>
         </ul>
 
         <div class="shopping-section">
             <h3>Mission Shopping pour toi ❤️</h3>
-            <p>On profitera des immenses centres commerciaux de Bangkok, où l'on trouvera une boutique <strong>Cotton On</strong> pour que tu puisses faire le plein de tes basiques préférés !</p>
+            <p>On profitera des immenses centres commerciaux de Bangkok, c'est sur qu'on trouvera un <strong>Cotton On</strong> et un <strong>Brandy</strong> pour que tu puisses acheter plein de joggings, de hauts mimis et de pyjamas pour la maison !</p>
         </div>
 
         <a href="our_adventures.html" class="back-link">Retour à nos projets</a>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
+
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             
             emoji.style.left = Math.random() * 100 + 'vw';
             
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's';
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem';
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
+    <script src="effects.js" defer></script>
 </body>
 </html>

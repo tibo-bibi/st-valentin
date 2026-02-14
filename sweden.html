@@ -5,53 +5,51 @@
 </head>
 <body class="country-page">
     <div class="container">
-        <h1 class="header_text">Notre Escapade en Suède</h1>
+        <h1 class="header_text">Nous en Suède</h1>
         <img src="images/sweden.jpg" alt="Suède" class="header-image">
-        <p>Entre le charme de la vieille ville de Stockholm, la magie des aurores boréales et la douceur de vivre du "fika".</p>
+        <p>Entre le charme de la vieille ville de Stockholm, la magie des aurores boréales et nous qui faisons des bb je pense que la suède en janvier/février ça va juste être incroyableeeeee je t'aime trop.</p>
         
         <h3>Ce qui nous attend :</h3>
         <ul>
-            <li>Se balader main dans la main dans les ruelles de Gamla Stan.</li>
-            <li>Partir à la chasse aux aurores boréales en Laponie suédoise.</li>
-            <li>Faire une pause "fika" (café et pâtisserie) tous les jours.</li>
-            <li>Explorer l'archipel de Stockholm en bateau.</li>
-            <li>Visiter le musée Vasa et son navire du 17ème siècle.</li>
+            <li>Se promener sous la neige à Stockholm avec nos grosses écharpes, les joues rouges et les mains gelées mais collées l'une à l'autre.</li>
+            <li>Partir à la chasse aux aurores boréales en Laponie suédoise, on aura un chalet et on fera ce que je te raconte le soir bien au chaud hihihihi.</li>
+            <li>Faire une pause "fika" (café et pâtisserie) tous les jours sauf qu'on aime pas le café donc on fera que la pâtisserie...</li>
+            <li>Explorer l'archipel de Stockholm en bateau, il va bien faire froid mais je pense qu'on l'oubliera jamais.</li>
+            <li>Visiter le musée Vasa et son navire du 17ème siècle pour notre côté couple cultivé (ref aux théâtre et nos tabis en mode cultivé MDR).</li>
         </ul>
 
         <div class="shopping-section">
             <h3>Mission Shopping pour toi ❤️</h3>
-            <p>On explorera les boutiques de design du quartier de Södermalm à Stockholm, et bien sûr, on fera un arrêt obligatoire à la boutique <strong>Brandy Melville</strong> !</p>
+            <p>On explorera les boutiques de design du quartier de Södermalm à Stockholm, et bien sûr, on fera un arrêt obligatoire à la boutique <strong>Brandy Melville</strong> pour t'acheter le tshirt de la ville. J'espère que tu trouveras plein de choses du style Stockholm et Copenhague mon coeuuuuur !</p>
         </div>
 
         <a href="our_adventures.html" class="back-link">Retour à nos projets</a>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             
             emoji.style.left = Math.random() * 100 + 'vw';
             
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's';
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem';
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
+    <script src="effects.js" defer></script>
 </body>
 </html>

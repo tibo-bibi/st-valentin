@@ -5,53 +5,51 @@
 </head>
 <body class="country-page">
     <div class="container">
-        <h1 class="header_text">Notre Aventure au Japon</h1>
+        <h1 class="header_text">Nous au Japon</h1>
         <img src="images/japan.jpg" alt="Japon" class="header-image">
-        <p>Entre la sérénité des temples de Kyoto et la folie électrique de Tokyo, on se créera des souvenirs inoubliables.</p>
+        <p>Entre les temples de Kyoto comme dans Inazuma et la vie platonique des habitants de Tokyo qui travaillent h24, on se créera des souvenirs inoubliables ma princesse je t'aime.</p>
         
         <h3>Ce qui nous attend :</h3>
         <ul>
-            <li>Se perdre dans la forêt de bambous d'Arashiyama.</li>
-            <li>Traverser le Shibuya Crossing, le carrefour le plus bondé du monde.</li>
-            <li>Manger des sushis et des ramens jusqu'à plus faim.</li>
-            <li>Visiter le sanctuaire Fushimi Inari-taisha avec ses milliers de torii rouges.</li>
-            <li>S'émerveiller au musée Ghibli ou au parc d'attractions Nintendo.</li>
+            <li>Aller au mont Fuji et rencontrer Satoru Gojo.</li>
+            <li>Traverser à Shibuya et se tp dans Alice in Borderlands.</li>
+            <li>Manger des sushis et des ramens en se tenant la main et dans la même assiette.</li>
+            <li>Saluer les créateurs de Monster Hunter et Dark Souls.</li>
+            <li>Aller dans des trucs Onsen comme LucassTV dans la nature.</li>
         </ul>
 
         <div class="shopping-section">
             <h3>Mission Shopping pour toi ❤️</h3>
-            <p>On ira chasser les trésors de la mode dans le quartier Harajuku de Tokyo, et on trouvera LA boutique <strong>Brandy Melville</strong> pour une session shopping parfaite !</p>
+            <p>On ira trouver LA boutique <strong>Brandy Melville</strong> pour une session shopping de fou et puis on achètera bien sur les Onitsuka Tigers matching et ballerines pour toi hihihi!</p>
         </div>
 
         <a href="our_adventures.html" class="back-link">Retour à nos projets</a>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            setInterval(createFallingEmoji, 200); // Crée un emoji un peu plus souvent
+            setInterval(createFallingEmoji, 200);
         });
 
         function createFallingEmoji() {
-            // La liste des emojis d'amour ! 💖
             const emojis = ['❤️', '💖', '✨', '💕', '🥰', '😍', '😘', '😻', '💘'];
             
             const emoji = document.createElement('div');
-            emoji.classList.add('heart'); // On réutilise la même classe CSS
+            emoji.classList.add('heart');
 
-            // On choisit un emoji au hasard dans notre liste
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             
             emoji.style.left = Math.random() * 100 + 'vw';
             
-            // On fait varier la vitesse et la taille
-            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's'; // entre 4s et 7s
-            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem'; // entre 1rem et 2.5rem
+            emoji.style.animationDuration = (Math.random() * 3) + 4 + 's';
+            emoji.style.fontSize = (Math.random() * 1.5) + 1 + 'rem';
             
             document.body.appendChild(emoji);
 
             setTimeout(() => {
                 emoji.remove();
-            }, 7000); // On le supprime un peu plus tard
+            }, 7000);
         }
     </script>
+    <script src="effects.js" defer></script>
 </body>
 </html>
